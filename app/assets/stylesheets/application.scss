@@ -1,0 +1,27 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+
+.container-fluid {
+ border-left: 50px solid #CE8005;
+ border-right: 50px solid #CE8005;
+ border-image: asset-data-url('margin/left.png') 0 50 0 50 round ;
+
+}
+
+.buttons { 
+	margin: 40px 0 0; 
+	position: fixed; top: 100px; left: 100px
+}
+
+#nav{
+	width:100%;
+	height:50px;
+	background-image: asset-data-url('margin/up.png');
+}
+
+.mapa {
+    width: 3026px;
+}
+
