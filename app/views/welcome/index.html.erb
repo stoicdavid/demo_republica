@@ -3,13 +3,14 @@
 
 	  </div>
 	
-
+</nav>
     <!-- Page Content -->
-    <div class="container-fluid">
+    <div class="container">
 
         <div class="row" id="scroll">
-            
-                <%= image_tag "mapa.jpg", :class=>"mapa"%>
+		<%= image_tag "http://cinemont.com/tutorials/howls/cloud-bg.png", :title => "title", :class => "cloud-bg" %>
+		<%= image_tag "http://cinemont.com/tutorials/howls/cloud-bg.png", :title => "title", :class => "cloud-bg2" %>            
+                <%= image_tag "mapa.jpg", :class=>"foreground"%>
 	        <div class="buttons">
 				
 	          <button class="zoom-in">Zoom In</button>
@@ -17,10 +18,27 @@
 	          <input type="range" class="zoom-range">
 	          <button class="reset">Reset</button>
 	        </div>
+
+    
+			    <div class="clouds">
+			<%= image_tag "http://cinemont.com/tutorials/howls/cloud_shadow-1.png", :title => "title", :class => "cloud-shadow1" %>
+			<%= image_tag "http://cinemont.com/tutorials/howls/cloud_shadow-1.png", :title => "title", :class => "cloud-shadow2" %>
+			<%= image_tag "http://cinemont.com/tutorials/howls/cloud_shadow-1.png", :title => "title", :class =>"cloud-shadow3"%>
+			<%= image_tag "http://cinemont.com/tutorials/howls/cloud-1.png", :title => "title", :class =>"cloud1"%>
+			<%= image_tag "http://cinemont.com/tutorials/howls/cloud-1.png", :title => "title", :class =>"cloud2"%>
+			<%= image_tag "http://cinemont.com/tutorials/howls/cloud-2.png", :title => "title", :class =>"cloud3"%>
+			<%= image_tag "http://cinemont.com/tutorials/howls/cloud-1.png", :title => "title", :class =>"cloud4"%>
+			<%= image_tag "http://cinemont.com/tutorials/howls/cloud-2.png", :title => "title", :class =>"cloud5"%>
+
+			    </div>
+			
 	      
         </div>
         <!-- /.row -->
-	        
+		
+
     </div>
     <!-- /.container -->
-</nav>
+	
+<div class="control-toggle">Toggle mouse controls</div>
+<div class="load-gate">Loading...</div>

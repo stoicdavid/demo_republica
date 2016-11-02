@@ -14,4 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require 'greensock/TweenLite'
+//= require 'greensock/TweenMax'	
+//= require 'greensock/jquery.gsap.js'
 //= require_tree .

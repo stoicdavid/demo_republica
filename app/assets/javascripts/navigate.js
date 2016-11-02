@@ -10,3 +10,14 @@ $(document).ready(function() {
     }).panzoom('zoom');
 
   });
+
+$(document).ready(function() {
+    TweenLite.to($('.load-gate'), 0.5, {
+      opacity: 0,
+      onComplete: function() {
+        $('.load-gate').remove();
+      }
+    });
+    requestAnimationFrame(draw);
+    cloudIntro();
+  });
