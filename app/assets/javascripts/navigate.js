@@ -1,3 +1,7 @@
 $( document ).on('turbolinks:load', function() {
-  $('#map').ImageViewer();
+  $('#map').ImageViewer(
+  {
+	  zoomValue:(210)
+	
+  });
 })
