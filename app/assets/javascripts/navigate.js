@@ -1,3 +1,8 @@
+$('html, body').css({
+    overflow: 'hidden',
+    height: '100%'
+});
+
 $( document ).on('turbolinks:load', function() {
   $('#map').ImageViewer(
   {
