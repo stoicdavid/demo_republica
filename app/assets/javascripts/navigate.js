@@ -3,9 +3,13 @@ $('html, body').css({
     height: '100%'
 });
 
+$
 $( document ).on('turbolinks:load', function() {
     FastClick.attach(document.body);
 })
+
+
+
 
 $('#map').on('turbolinks:load', function() {
 	var overscroll = function(el) {
@@ -67,3 +71,5 @@ $( document ).on('turbolinks:load', function() {
 	    console.log(ev);
 	});
 })
+
+

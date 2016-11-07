@@ -1,10 +1,24 @@
 .container-fluid {
 	padding:0px;
+
  border-left: 57px solid #CE8005;
  border-right: 57px solid #CE8005;
  border-image: asset-data-url('margin/left.png') 0 50 0 50 round ;
 
 }
+
+
+.navbar-fixed-top{
+	height:57px;
+	background-image: asset-data-url("margin/up.png");
+}
+
+.navbar-fixed-bottom{
+		height:57px;
+			background-image: asset-data-url("margin/down.png");
+}
+
+
 
 @media(max-width:1400px){
 	.container-fluid {
