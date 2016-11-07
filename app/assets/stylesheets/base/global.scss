@@ -12,8 +12,8 @@
 	 border-left: 57px solid #CE8005;
 	 border-right: 57px solid #CE8005;
 	 border-image: asset-data-url('margin/left.png') 0 50 0 50 round ;
-	    width:380px;
-	    height:720px;
+	    width:100%;
+	    height:100%;
 	    position:relative;
 
 	    overflow:hidden;
@@ -21,10 +21,10 @@
 
 	.img-responsive {
 	    position:absolute;
-	    top:50%;
+	    top:100%;
 	    min-height:100%;
 	    display:block;
-	    left:50%;
+	    left:100%;
 	    -webkit-transform: translate(-50%, -50%);
 	    min-width:100%;
 	}
