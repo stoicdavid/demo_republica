@@ -17,4 +17,6 @@
 //= require 'greensock/TweenLite'
 //= require 'greensock/TweenMax'	
 //= require 'greensock/jquery.gsap.js'
-//= require_tree .
+//= require init
+//= require imageviewer
+//= require navigate	

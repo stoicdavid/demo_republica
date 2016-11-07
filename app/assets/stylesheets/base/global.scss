@@ -1,9 +1,35 @@
 .container-fluid {
- border-left: 50px solid #CE8005;
- border-right: 50px solid #CE8005;
+	padding:0px;
+ border-left: 57px solid #CE8005;
+ border-right: 57px solid #CE8005;
  border-image: asset-data-url('margin/left.png') 0 50 0 50 round ;
 
 }
+
+@media(max-width:768px){
+	.container-fluid {
+		padding:0px;
+	 border-left: 57px solid #CE8005;
+	 border-right: 57px solid #CE8005;
+	 border-image: asset-data-url('margin/left.png') 0 50 0 50 round ;
+	    width:380px;
+	    height:720px;
+	    position:relative;
+
+	    overflow:hidden;
+	}
+
+	.img-responsive {
+	    position:absolute;
+	    top:50%;
+	    min-height:100%;
+	    display:block;
+	    left:50%;
+	    -webkit-transform: translate(-50%, -50%);
+	    min-width:100%;
+	}
+}
+
 
 .buttons { 
 	margin: 40px 0 0; 
