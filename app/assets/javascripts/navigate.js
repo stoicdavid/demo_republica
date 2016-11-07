@@ -4,6 +4,14 @@ $('html, body').css({
 });
 
 $( document ).on('turbolinks:load', function() {
+    FastClick.attach(document.body);
+})
+
+
+
+
+
+$( document ).on('turbolinks:load', function() {
   $('#map').ImageViewer(
   {
 	  zoomValue:(210)
