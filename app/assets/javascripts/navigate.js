@@ -6,17 +6,20 @@ $( document ).on('turbolinks:load', function() {
   });
 })
 
-var myElement = document.getElementById('#map');
+$( document ).on('turbolinks:load', function() {
 
-// create a simple instance
-// by default, it only adds horizontal recognizers
-var mc = new Hammer(myElement);
+	var myElement = document.getElementById('map');
 
-// let the pan gesture support all directions.
-// this will block the vertical scrolling on a touch-device while on the element
-mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+	// create a simple instance
+	// by default, it only adds horizontal recognizers
+	var mc = new Hammer(myElement);
 
-// listen to events...
-mc.on("panleft panright panup pandown tap press", function(ev) {
-    myElement.textContent = ev.type +" gesture detected.";
-});
+	// let the pan gesture support all directions.
+	// this will block the vertical scrolling on a touch-device while on the element
+	mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+
+	// listen to events...
+	mc.on("panleft panright panup pandown tap press", function(ev) {
+	    console.log(ev);
+	});
+})
