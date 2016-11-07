@@ -19,4 +19,6 @@
 //= require 'greensock/jquery.gsap.js'
 //= require init
 //= require imageviewer
-//= require navigate	
+//= require navigate
+//= require 'hammer/hammer'
+//= require 'hammer/jquery.hammer'
