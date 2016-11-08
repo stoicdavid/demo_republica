@@ -45,19 +45,19 @@
 
     </div>
 	
-<script>
-	$( document ).ready(function ()
+	<script>
+	$(document).ready(function ()
 	{
-			$('#map').mapster({
-			singleSelect : false,
-			render_highlight : { altImage : "<%= asset_path('shape3.jpg') %>" },
-		     mapKey: 'color',
-			fill : true, altImage : "<%= asset_path('mapa.jpg') %>",
-			fillOpacity : 1,
-				areas : [{key : 'blue', selected : true, altImage : "<%= asset_path('mapa.jpg') %>"}]
-		});
+		$('#shape1').mapster({
+		singleSelect : false,
+		render_highlight : { altImage : 'images/shape3.jpg' },
+	     mapKey: 'color',
+		fill : true, altImage : 'images/shape2.jpg',
+		fillOpacity : 1,
+			areas : [{key : 'blue', selected : true, altImage : 'images/shape2.jpg'}]
 	});
-</script>	
+	});
+	</script>
     <!-- /.container -->
 <map id="map1" name="map1">
 	<area shape="poly" alt="" title="" color="blue" coords="1580,1523,1590,1536,1590,1541,1594,1546,1597,1552,1596,1563,1599,1572,1610,1583,1617,1585,1617,1589,1631,1602,1634,1613,1630,1623,1630,1629,1622,1635,1618,1636,1615,1645,1617,1655,1620,1657,1618,1664,1621,1667,1616,1676,1609,1687,1573,1684,1557,1684,1536,1685,1524,1687,1515,1685,1505,1673,1504,1664,1511,1658,1507,1647,1513,1643,1523,1636,1528,1632,1527,1620,1525,1614,1516,1608,1518,1598,1519,1589,1528,1583,1529,1576,1534,1573,1534,1566,1538,1558,1538,1551,1545,1547,1545,1543,1549,1541,1551,1535,1556,1536,1563,1529,1570,1523,1570,1521,1570,1521" href="" target="" />
