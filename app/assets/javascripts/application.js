@@ -18,9 +18,5 @@
 //= require 'greensock/TweenMax'	
 //= require 'greensock/jquery.gsap.js'
 //= require init
-//= require imageviewer
-//= require fastclick
-//= require 'hammer'
-//= require 'jquery.hammer'
-//= require 'jquery.imagemapster'
+//= require leaflet
 //= require navigate

@@ -8,8 +8,8 @@
 <nav class="navbar navbar-default navbar-fixed-bottom"></nav>
 
     	
-    <div class="container-fluid" data-src="mapa.jpg" id="image">
-	    <%= image_tag "mapa.jpg", :class=>"img-responsive", :id => "map", :usemap=>"#map1"%>
+    <div class="container-fluid"  id="map">
+	    <%# image_tag "mapa.jpg", :class=>"img-responsive", :id => "map", :usemap=>"#map1"%>
 		
 		
 
@@ -45,19 +45,43 @@
 
     </div>
 	
-	<script>
-	$(document).ready(function ()
-	{
-		$('#shape1').mapster({
-		singleSelect : false,
-		render_highlight : { altImage : 'images/shape3.jpg' },
-	     mapKey: 'color',
-		fill : true, altImage : 'images/shape2.jpg',
-		fillOpacity : 1,
-			areas : [{key : 'blue', selected : true, altImage : 'images/shape2.jpg'}]
+<script>
+	
+	0.9765625
+
+	var map = L.map('map').setView([60, 70], 2);
+	
+	var bounds = [[-26.5,-25], [1021.5,1023]];
+
+
+	var meridaMarker = L.icon({
+	    iconUrl: 'merida.tif',
+
+	    iconSize:     [800, 419], // size of the icon
+	    iconAnchor:   [750, 750], // point of the icon which will correspond to marker's location
+	    popupAnchor:  [750, 750] // point from which the popup should open relative to the iconAnchor
 	});
-	});
-	</script>
+    
+	L.tileLayer('republica/{z}/{x}/{y}.png', {
+        minZoom: 2,
+        maxZoom: 4,
+		noWrap: true,
+		crs: L.CRS.Simple,
+        attribution: 'eMotion',
+
+    }).addTo(map);
+	var sol = L.latLng([ 145, 175.2 ]);
+	L.marker(sol).addTo(map);
+	var marker = L.marker([51.5, 20]).addTo(map);
+	
+	var circle = L.circle([145, 175.2], {
+	    color: 'red',
+	    fillColor: '#f03',
+	    fillOpacity: 0.5,
+	    radius: 500
+	}).addTo(map);
+	
+</script>	
     <!-- /.container -->
 <map id="map1" name="map1">
 	<area shape="poly" alt="" title="" color="blue" coords="1580,1523,1590,1536,1590,1541,1594,1546,1597,1552,1596,1563,1599,1572,1610,1583,1617,1585,1617,1589,1631,1602,1634,1613,1630,1623,1630,1629,1622,1635,1618,1636,1615,1645,1617,1655,1620,1657,1618,1664,1621,1667,1616,1676,1609,1687,1573,1684,1557,1684,1536,1685,1524,1687,1515,1685,1505,1673,1504,1664,1511,1658,1507,1647,1513,1643,1523,1636,1528,1632,1527,1620,1525,1614,1516,1608,1518,1598,1519,1589,1528,1583,1529,1576,1534,1573,1534,1566,1538,1558,1538,1551,1545,1547,1545,1543,1549,1541,1551,1535,1556,1536,1563,1529,1570,1523,1570,1521,1570,1521" href="" target="" />
