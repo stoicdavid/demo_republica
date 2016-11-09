@@ -3,10 +3,6 @@ $('html, body').css({
     height: '100%'
 });
 
-$
-$( document ).on('turbolinks:load', function() {
-    FastClick.attach(document.body);
-})
 
 
 
@@ -46,31 +42,61 @@ $('#map').on('turbolinks:load', function() {
 })
 
 
+
+
+
+
 $( document ).on('turbolinks:load', function() {
-  $('#map').ImageViewer(
-  {
-	  zoomValue:(210)
+
+var map = L.map('map').setView([70, 40], 2);
+
+var bounds = [[-26.5,-25], [1021.5,1023]];
+
+var mapSW = [0,2230];
+var mapNE = [3030,0];
+
+
+
+L.Icon.Default.imagePath = '/assets'
+L.tileLayer('repugeo/{z}/{x}/{y}.png', {
+    minZoom: 2,
+    maxZoom: 4,
+	continuosWorld:false,
+	noWrap: true,
+	crs: L.CRS.Simple,
+    attribution: 'eMotion',
+
+}).addTo(map);
+
+map.setMaxBounds(new L.LatLngBounds(
+	map.unproject(mapSW,map.getMaxZoom()),
+	map.unproject(mapNE,map.getMaxZoom()),
 	
-  });
+));
+
+var marker = L.marker([51.5, 20],{draggable:true}).addTo(map);
+marker.bindPopup(marker.getLatLng().toString());
+marker.on('dragend',function(e){
+	marker.getPopup().setContent( marker.getLatLng().toString()).openOn(map);
+});
+
+
+var meridaMarker = L.icon({
+    iconUrl: 'merida.tif',
+
+    iconSize:     [88, 119], // size of the icon
+    iconAnchor:   [60, 46.8], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-10, -50] // point from which the popup should open relative to the iconAnchor
+});
+
+var marker2 = L.marker([57.6, 47.5], {icon: meridaMarker}).addTo(map);
+marker2.bindPopup("Merida");
+
+var circle = L.circle([145, 175.2], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+}).addTo(map);
+
 })
-
-$( document ).on('turbolinks:load', function() {
-
-	var myElement = document.getElementById('map');
-
-	// create a simple instance
-	// by default, it only adds horizontal recognizers
-	var mc = new Hammer(myElement);
-
-	// let the pan gesture support all directions.
-	// this will block the vertical scrolling on a touch-device while on the element
-	mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-
-	// listen to events...
-	mc.on("panleft panright panup pandown tap press", function(ev) {
-	    console.log(ev);
-	});
-})
-
-
-

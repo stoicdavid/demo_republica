@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <TileMap version="1.0.0" tilemapservice="http://tms.osgeo.org/1.0.0">
+      <Title>repgeo.tif</Title>
+      <Abstract></Abstract>
+      <SRS>PROJCS["unnamed",GEOGCS["unnamed ellipse",DATUM["unknown",SPHEROID["unnamed",6378137,0]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0],PARAMETER["scale_factor",1],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]]]</SRS>
+      <BoundingBox minx="-20037508.33999999985099" miny="-14793058.04086556471884" maxx="20037508.33999999985099" maxy="14793058.04079999960959"/>
+      <Origin x="-20037508.33999999985099" y="-14793058.04086556471884"/>
+      <TileFormat width="256" height="256" mime-type="image/png" extension="png"/>
+      <TileSets profile="raster">
+        <TileSet href="0" units-per-pixel="211896.98178453402943" order="0"/>
+        <TileSet href="1" units-per-pixel="105948.49089226701471" order="1"/>
+        <TileSet href="2" units-per-pixel="52974.24544613350736" order="2"/>
+        <TileSet href="3" units-per-pixel="26487.12272306675368" order="3"/>
+        <TileSet href="4" units-per-pixel="13243.56136153337684" order="4"/>
+      </TileSets>
+    </TileMap>
+    
